@@ -39,39 +39,48 @@ This guide shows an easy workflow to create a **Free Windows RDP** using **GitHu
 
 ---
 
-### 2️⃣ Open Codespace or Repository Editor
+### 🔐 2️⃣ Encode Your Link
+- Go to **RDPCammand**: 🔗 [CMDRDP](https://raw.githubusercontent.com/iemabdullah/Windows-10/refs/heads/main/CMD.txt)  
+- Copy the RDP command or setup link you want to use.  
+- Encode it using this Base64 encoder: 🔗 [https://base64.abdullah.nyc.mn/](https://base64.abdullah.nyc.mn/)  
+
+> 💡 Tip: Keep the original command safe until you have the encoded output saved in your workflow or secrets.
+
+---
+
+### 3️⃣ Open Codespace or Repository Editor
 - Open your GitHub Codespace (or use the online repo editor).  
 - Create folders like `backend/` and add workflow or script files there.  
 - Run your setup commands as required.
 
 ---
 
-### 3️⃣ Add Repository Secrets
+### 4️⃣ Add Repository Secrets
 - Go to **Settings → Secrets → Actions → New Repository Secret**.  
 - Paste your Auth Key (or API Key) and save it.  
 
 ---
 
-### 4️⃣ Get Base64 Code
+### 5️⃣ Get Base64 Code (if required)
 - Visit [https://base64.abdullah.nyc.mn/](https://base64.abdullah.nyc.mn/)  
-- Paste the given value and click **Decode** to get your Base64 output.
+- Paste the given encoded value and click **Decode** to get the plaintext used in the workflow.
 
 ---
 
-### 5️⃣ Create the RDP Workflow
+### 6️⃣ Create the RDP Workflow
 - Use the Base64-decoded value to generate your RDP workflow file.  
 - Save the workflow file under `.github/workflows/rdp.yml`.  
 - Commit and push it.
 
 ---
 
-### 6️⃣ Run the Workflow
+### 7️⃣ Run the Workflow
 - Go to **Actions** tab → choose your workflow → click **Run Workflow**.  
 - Wait for it to complete — check logs for **IP address** and **credentials**.
 
 ---
 
-### 7️⃣ Connect to Your RDP
+### 8️⃣ Connect to Your RDP
 - Install **Tailscale** on your PC or phone.  
 - Sign in with your account.  
 - Open **Remote Desktop Connection**.  
